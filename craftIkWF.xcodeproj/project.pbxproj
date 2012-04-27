@@ -228,6 +228,7 @@
 		6B2052CF1547D1B800D5A120 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
 				PRODUCT_NAME = craftIk_run;
 			};
 			name = Debug;
@@ -235,6 +236,7 @@
 		6B2052D01547D1B800D5A120 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
 				PRODUCT_NAME = craftIk_run;
 			};
 			name = Release;
