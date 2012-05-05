@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B43CDF71554E4B000F2AA23 /* CTObject.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B43CDF61554E4B000F2AA23 /* CTObject.c */; };
 		6B4D62C8154A547900E9B959 /* CTString.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B4D62C7154A547900E9B959 /* CTString.c */; };
 		6B87E6111547D7EF001CE8AE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B87E6101547D7EF001CE8AE /* main.c */; };
 		6BD246DF1548447500E91B16 /* CTSetting.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BD246DE1548447500E91B16 /* CTSetting.c */; };
@@ -25,13 +26,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B43CDF51554E49400F2AA23 /* CTObject.h */ = {isa = PBXFileReference; lineEnding = 0; path = CTObject.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6B43CDF61554E4B000F2AA23 /* CTObject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = CTObject.c; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		6B4D62C6154A538B00E9B959 /* CTString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTString.h; sourceTree = SOURCE_ROOT; };
-		6B4D62C7154A547900E9B959 /* CTString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CTString.c; sourceTree = SOURCE_ROOT; };
+		6B4D62C7154A547900E9B959 /* CTString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = CTString.c; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		6B87E5FA1547D76F001CE8AE /* craftIk */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = craftIk; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B87E6101547D7EF001CE8AE /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = SOURCE_ROOT; };
 		6BD246DE1548447500E91B16 /* CTSetting.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CTSetting.c; sourceTree = SOURCE_ROOT; };
 		6BD246E01548448200E91B16 /* CTSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTSetting.h; sourceTree = SOURCE_ROOT; };
-		6BD24701154845EA00E91B16 /* CTBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTBase.h; sourceTree = SOURCE_ROOT; };
+		6BD24701154845EA00E91B16 /* CTTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTTypes.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,14 +48,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B4D62C4154A536B00E9B959 /* Basic Types */ = {
+		6B43CDF31554E48700F2AA23 /* Object Memory Management */ = {
 			isa = PBXGroup;
 			children = (
-				6BD24701154845EA00E91B16 /* CTBase.h */,
-				6B4D62C6154A538B00E9B959 /* CTString.h */,
-				6B4D62C7154A547900E9B959 /* CTString.c */,
+				6B43CDF61554E4B000F2AA23 /* CTObject.c */,
+				6B43CDF51554E49400F2AA23 /* CTObject.h */,
+			);
+			name = "Object Memory Management";
+			sourceTree = "<group>";
+		};
+		6B43CDF81554FADF00F2AA23 /* Base System */ = {
+			isa = PBXGroup;
+			children = (
+				6B43CDF91554FAED00F2AA23 /* Basic Types */,
+				6B43CDF31554E48700F2AA23 /* Object Memory Management */,
+			);
+			name = "Base System";
+			sourceTree = "<group>";
+		};
+		6B43CDF91554FAED00F2AA23 /* Basic Types */ = {
+			isa = PBXGroup;
+			children = (
+				6B43CE1015550E3100F2AA23 /* CTString */,
+				6BD24701154845EA00E91B16 /* CTTypes.h */,
 			);
 			name = "Basic Types";
+			sourceTree = "<group>";
+		};
+		6B43CE1015550E3100F2AA23 /* CTString */ = {
+			isa = PBXGroup;
+			children = (
+				6B4D62C7154A547900E9B959 /* CTString.c */,
+				6B4D62C6154A538B00E9B959 /* CTString.h */,
+			);
+			name = CTString;
 			sourceTree = "<group>";
 		};
 		6B87E5EF1547D76F001CE8AE = {
@@ -74,7 +103,7 @@
 		6B87E5FD1547D76F001CE8AE /* craftIk */ = {
 			isa = PBXGroup;
 			children = (
-				6B4D62C4154A536B00E9B959 /* Basic Types */,
+				6B43CDF81554FADF00F2AA23 /* Base System */,
 				6BD246DC1548441800E91B16 /* Settings */,
 				6B87E6101547D7EF001CE8AE /* main.c */,
 			);
@@ -144,6 +173,7 @@
 				6B87E6111547D7EF001CE8AE /* main.c in Sources */,
 				6BD246DF1548447500E91B16 /* CTSetting.c in Sources */,
 				6B4D62C8154A547900E9B959 /* CTString.c in Sources */,
+				6B43CDF71554E4B000F2AA23 /* CTObject.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

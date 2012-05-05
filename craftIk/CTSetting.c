@@ -7,31 +7,32 @@
 //
 
 #include "CTSetting.h"
+#include "CTObject.h"
 #include <string.h>
 
 
 struct _CTSetting {
-	BOOL allowFlight;
-	BOOL allowNether;
-	BOOL allowPvP;
+	CTBOOL allowFlight;
+	CTBOOL allowNether;
+	CTBOOL allowPvP;
 	CTDifficulty difficulty;
-	BOOL enableQuery;
-	BOOL enableRcon;
+	CTBOOL enableQuery;
+	CTBOOL enableRcon;
 	CTGameMode gameMode;
-	BOOL generateStructures;
+	CTBOOL generateStructures;
 	CTString *levelName;
 	CTULong levelSeed;
 	CTLevelType levelType;
 	CTShort maxBuildHeight;
 	CTShort maxPlayerCount;
-	BOOL onlineMode;
+	CTBOOL onlineMode;
 	CTString *serverDescription;
 	CTString *serverIP;
 	CTShort serverPort;
-	BOOL spawnAnimals;
-	BOOL spawnMonsters;
-	BOOL spawnNPCs;
-	BOOL useWhiteList;
+	CTBOOL spawnAnimals;
+	CTBOOL spawnMonsters;
+	CTBOOL spawnNPCs;
+	CTBOOL useWhiteList;
 	CTByte viewDistance;
 };
 
@@ -40,19 +41,19 @@ static CTSetting *CTSettingGlobal(CTSetting *);
 static CTULong CTStringHash(char *);
 
 
-BOOL CTSettingGetAllowFlight() {
+CTBOOL CTSettingGetAllowFlight() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->allowFlight;
 }
 
-BOOL CTSettingGetAllowNether() {
+CTBOOL CTSettingGetAllowNether() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->allowNether;
 }
 
-BOOL CTSettingGetAllowPvP() {
+CTBOOL CTSettingGetAllowPvP() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->allowPvP;
@@ -64,13 +65,13 @@ CTDifficulty CTSettingGetDifficulty() {
 	return setting->difficulty;
 }
 
-BOOL CTSettingGetEnableQuery() {
+CTBOOL CTSettingGetEnableQuery() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->enableQuery;
 }
 
-BOOL CTSettingGetEnableRcon() {
+CTBOOL CTSettingGetEnableRcon() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->enableRcon;
@@ -82,7 +83,7 @@ CTGameMode CTSettingGetGameMode() {
 	return setting->gameMode;
 }
 
-BOOL CTSettingGetGenerateStructures() {
+CTBOOL CTSettingGetGenerateStructures() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->generateStructures;
@@ -90,11 +91,8 @@ BOOL CTSettingGetGenerateStructures() {
 
 CTString *CTSettingGetLevelName() {
 	CTSetting *setting=CTSettingGlobal(NULL);
-	CTString *levelName=NULL;
 	
-	CTStringClone(&levelName, setting->levelName);
-	
-	return levelName;
+	return setting->levelName;
 }
 
 CTULong CTSettingGetLevelSeed() {
@@ -121,7 +119,7 @@ CTShort CTSettingGetMaxPlayerCount() {
 	return setting->maxPlayerCount;
 }
 
-BOOL CTSettingGetOnlineMode() {
+CTBOOL CTSettingGetOnlineMode() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->onlineMode;
@@ -129,20 +127,14 @@ BOOL CTSettingGetOnlineMode() {
 
 CTString *CTSettingGetServerDescription() {
 	CTSetting *setting=CTSettingGlobal(NULL);
-	CTString *serverDescription=NULL;
 	
-	CTStringClone(&serverDescription, setting->serverDescription);
-	
-	return serverDescription;
+	return setting->serverDescription;
 }
 
 CTString *CTSettingGetServerIP() {
 	CTSetting *setting=CTSettingGlobal(NULL);
-	CTString *serverIP=NULL;
 	
-	CTStringClone(&serverIP, setting->serverIP);
-	
-	return serverIP;
+	return setting->serverIP;
 }
 
 CTShort CTSettingGetServerPort() {
@@ -151,25 +143,25 @@ CTShort CTSettingGetServerPort() {
 	return setting->serverPort;
 }
 
-BOOL CTSettingGetSpawnAnimals() {
+CTBOOL CTSettingGetSpawnAnimals() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->spawnAnimals;
 }
 
-BOOL CTSettingGetSpawnMonsters() {
+CTBOOL CTSettingGetSpawnMonsters() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->spawnMonsters;
 }
 
-BOOL CTSettingGetSpawnNPCs() {
+CTBOOL CTSettingGetSpawnNPCs() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->spawnNPCs;
 }
 
-BOOL CTSettingGetUseWhiteList() {
+CTBOOL CTSettingGetUseWhiteList() {
 	CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->useWhiteList;
@@ -186,7 +178,7 @@ void CTSettingReload() {
 }
 
 static CTSetting *CTSettingGlobal(CTSetting *newSetting) {
-	static BOOL initialized=NO;
+	static CTBOOL initialized=NO;
 	static CTSetting currentSetting;
 	
 	if(newSetting!=NULL) {

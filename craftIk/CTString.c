@@ -7,37 +7,41 @@
 //
 
 #include "CTString.h"
-#include <stdlib.h>
+#include "CTObject.h"
 #include <string.h>
 
 
 struct _CTString {
+	CTObjectHeader *header;
 	CTInteger length;
 	char *body;
 };
 
 
-BOOL CTStringClone(CTString **cloneString, CTString *sourceString) {
-	return CTStringCreate(cloneString, sourceString->body, sourceString->length);
+CTBOOL CTStringCopy(CTString **cloneString, CTString *sourceString) {
+	return CTStringInit(cloneString, sourceString->body, sourceString->length);
 }
 
-BOOL CTStringCreate(CTString **newString, char *sourceString, CTInteger sourceLength) {
+CTBOOL CTStringInit(CTString **newString, char *sourceString, CTInteger sourceLength) {
 	if(newString==NULL)
 		return NO;
 	
-	*newString=(CTString *)malloc(sizeof(CTString));
-	if(*newString==NULL)
+	if(CTAllocate((void **)newString, sizeof(CTString))==NO)
 		return NO;
 	
 	(*newString)->length=(sourceLength<0?strlen(sourceString):sourceLength);
 	
-	(*newString)->body=(char *)malloc(sizeof(char)*((*newString)->length));
+	(*newString)->body=(char *)malloc((*newString)->length);
 	if((*newString)->body==NULL) {
 		free(*newString);
 		
 		return NO;
 	}
-	memcpy((*newString)->body, sourceString, (*newString)->length);
+	memmove((*newString)->body, sourceString, (*newString)->length);
 	
 	return YES;
+}
+
+void CTStringCleanUp(void *existingCTStringObject) {
+	free(((CTString *)existingCTStringObject)->body);
 }

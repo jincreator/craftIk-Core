@@ -12,5 +12,6 @@
 int main(int argc, const char **argv) {
 	printf("Hello, Dolly!\n");
 	
-	return 0;
+	//return 0;
+	return 0xB05D;
 }

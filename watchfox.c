@@ -16,7 +16,7 @@
 int main(int argc, const char **argv) {
 	int WFExitCode=EXIT_SUCCESS;
 	
-	printf("craftIk WatchFox(TM)\nIn case server daemon exits, crashes, etc, WatchFox(TM) will restart the process.\n\n");
+	printf("craftIk WatchFox(TM)\nIn case server daemon crashes, WatchFox(TM) will restart the process.\n\n");
 	
 	while(1) {
 		pid_t WFChildProcessID=fork();
@@ -29,14 +29,14 @@ int main(int argc, const char **argv) {
 			
 			// Lines below will never be executed upon successful execv() call.
 			fprintf(stderr, "ERROR: Child says: 'Failed to execute server daemon. (0x%X) :('\n\nTerminating...\n", errno);
-			WFExitCode=0xC820;
+			WFExitCode=0xC4B5;
 			
 			break;
 		} else { // on WatchFox(TM)'s side.
 			int WFChildExitCode=EXIT_SUCCESS;
 			
 			waitpid(WFChildProcessID, &WFChildExitCode, 0);
-			if(WFChildExitCode==0xC820)
+			if(WFChildExitCode==0xC4B5)
 				abort();
 			else if(WFChildExitCode==0xB05D)
 				break;

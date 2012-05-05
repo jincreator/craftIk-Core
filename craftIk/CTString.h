@@ -9,13 +9,14 @@
 #ifndef _CTSTRING_H_
 #define _CTSTRING_H_
 
-#include "CTBase.h"
+#include "CTTypes.h"
 
 
 typedef struct _CTString CTString;
 
 
-BOOL CTStringClone(CTString **, CTString *);
-BOOL CTStringCreate(CTString **, char *, CTInteger);
+CTBOOL CTStringCopy(CTString **cloneString, CTString *sourceString);
+CTBOOL CTStringInit(CTString **newString, char *sourceString, CTInteger sourceLength);
+void CTStringCleanUp(void *existingCTStringObject);
 
 #endif
