@@ -66,10 +66,13 @@ void CTRelease(void *object, void (*objectCleanUpFunction)(void *)) {
 		//pthread_mutex_unlock(standardObject->header->lock);
 }
 
-void CTRetain(void *object) {
-	struct _CTObjectTemplate *standardObject=(struct _CTObjectTemplate *)object;
+void *CTRetain(void *object) {
+	//struct _CTObjectTemplate *standardObject=(struct _CTObjectTemplate *)object;
 	
 	//pthread_mutex_lock(standardObject->header->lock);
-	++(standardObject->header->referenceCount);
+	//++(standardObject->header->referenceCount);
 	//pthread_mutex_unlock(standardObject->header->lock);
+	++(((struct _CTObjectTemplate *)object)->header->referenceCount);
+	
+	return object;
 }

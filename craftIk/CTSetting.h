@@ -33,8 +33,6 @@ enum {
 };
 typedef CTUByte CTLevelType;
 
-typedef struct _CTSetting CTSetting;
-
 
 CTBOOL CTSettingGetAllowFlight();
 CTBOOL CTSettingGetAllowNether();

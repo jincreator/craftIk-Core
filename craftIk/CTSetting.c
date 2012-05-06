@@ -8,6 +8,7 @@
 
 #include "CTSetting.h"
 #include "CTObject.h"
+#include <stdio.h>
 #include <string.h>
 
 
@@ -37,152 +38,159 @@ struct _CTSetting {
 };
 
 
-static CTSetting *CTSettingGlobal(CTSetting *);
+static struct _CTSetting *CTSettingGlobal(struct _CTSetting *);
 static CTULong CTStringHash(char *);
 
 
 CTBOOL CTSettingGetAllowFlight() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->allowFlight;
 }
 
 CTBOOL CTSettingGetAllowNether() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->allowNether;
 }
 
 CTBOOL CTSettingGetAllowPvP() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->allowPvP;
 }
 
 CTDifficulty CTSettingGetDifficulty() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->difficulty;
 }
 
 CTBOOL CTSettingGetEnableQuery() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->enableQuery;
 }
 
 CTBOOL CTSettingGetEnableRcon() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->enableRcon;
 }
 
 CTGameMode CTSettingGetGameMode() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->gameMode;
 }
 
 CTBOOL CTSettingGetGenerateStructures() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->generateStructures;
 }
 
 CTString *CTSettingGetLevelName() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
-	return setting->levelName;
+	return CTRetain(setting->levelName);
 }
 
 CTULong CTSettingGetLevelSeed() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->levelSeed;
 }
 
 CTLevelType CTSettingGetLevelType() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->levelType;
 }
 
 CTShort CTSettingGetMaxBuildHeight() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->maxBuildHeight;
 }
 
 CTShort CTSettingGetMaxPlayerCount() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->maxPlayerCount;
 }
 
 CTBOOL CTSettingGetOnlineMode() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->onlineMode;
 }
 
 CTString *CTSettingGetServerDescription() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
-	return setting->serverDescription;
+	return CTRetain(setting->serverDescription);
 }
 
 CTString *CTSettingGetServerIP() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
-	return setting->serverIP;
+	return CTRetain(setting->serverIP);
 }
 
 CTShort CTSettingGetServerPort() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->serverPort;
 }
 
 CTBOOL CTSettingGetSpawnAnimals() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->spawnAnimals;
 }
 
 CTBOOL CTSettingGetSpawnMonsters() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->spawnMonsters;
 }
 
 CTBOOL CTSettingGetSpawnNPCs() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->spawnNPCs;
 }
 
 CTBOOL CTSettingGetUseWhiteList() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->useWhiteList;
 }
 
 CTByte CTSettingGetViewDistance() {
-	CTSetting *setting=CTSettingGlobal(NULL);
+	struct _CTSetting *setting=CTSettingGlobal(NULL);
 	
 	return setting->viewDistance;
 }
 
 void CTSettingReload() {
+	FILE *settingFile=NULL;
+	
+	settingFile=fopen("server.cfg", "r");
+	
 	//@ Implement me!
+	
+	fclose(settingFile);
+	settingFile=NULL;
 }
 
-static CTSetting *CTSettingGlobal(CTSetting *newSetting) {
+static struct _CTSetting *CTSettingGlobal(struct _CTSetting *newSetting) {
 	static CTBOOL initialized=NO;
-	static CTSetting currentSetting;
+	static struct _CTSetting currentSetting;
 	
 	if(newSetting!=NULL) {
-		memcpy(&currentSetting, newSetting, sizeof(CTSetting));
+		memcpy(&currentSetting, newSetting, sizeof(struct _CTSetting));
 		initialized=YES;
 	} else if(initialized==NO)
 		CTSettingReload();
