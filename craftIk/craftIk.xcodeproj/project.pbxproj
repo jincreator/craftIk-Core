@@ -26,7 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6B43CDF51554E49400F2AA23 /* CTObject.h */ = {isa = PBXFileReference; lineEnding = 0; path = CTObject.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6B43CDF51554E49400F2AA23 /* CTObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CTObject.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		6B43CDF61554E4B000F2AA23 /* CTObject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = CTObject.c; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.c; };
 		6B4D62C6154A538B00E9B959 /* CTString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTString.h; sourceTree = SOURCE_ROOT; };
 		6B4D62C7154A547900E9B959 /* CTString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; path = CTString.c; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.c; };

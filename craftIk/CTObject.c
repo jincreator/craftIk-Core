@@ -12,8 +12,10 @@
 
 struct _CTObjectHeader {
 	CTShort referenceCount;
+	/*
 	pthread_mutex_t *lock;
 	pthread_mutexattr_t *lockAttributes;
+	//*/
 };
 
 struct _CTObjectTemplate {
@@ -34,9 +36,11 @@ CTBOOL CTAllocate(void **objectPosition, size_t objectSize) {
 	struct _CTObjectTemplate *rawObject=(struct _CTObjectTemplate *)(rawMemory+sizeof(CTObjectHeader));
 	
 	rawHeader->referenceCount=1;
+	/*
 	pthread_mutexattr_init(rawHeader->lockAttributes);
 	pthread_mutexattr_settype(rawHeader->lockAttributes, PTHREAD_MUTEX_ERRORCHECK);
 	pthread_mutex_init(rawHeader->lock, rawHeader->lockAttributes);
+	//*/
 	rawObject->header=rawHeader;
 	
 	*objectPosition=rawObject;
@@ -47,23 +51,25 @@ CTBOOL CTAllocate(void **objectPosition, size_t objectSize) {
 void CTRelease(void *object, void (*objectCleanUpFunction)(void *)) {
 	struct _CTObjectTemplate *standardObject=(struct _CTObjectTemplate *)object;
 	
-	pthread_mutex_lock(standardObject->header->lock);
+	//pthread_mutex_lock(standardObject->header->lock);
 	--(standardObject->header->referenceCount);
 	if(standardObject->header->referenceCount==0) {
 		if(objectCleanUpFunction!=NULL)
 			objectCleanUpFunction(object);
+		/*
 		pthread_mutex_unlock(standardObject->header->lock);
 		pthread_mutex_destroy(standardObject->header->lock);
 		pthread_mutexattr_destroy(standardObject->header->lockAttributes);
+		//*/
 		free(standardObject->header);
-	} else
-		pthread_mutex_unlock(standardObject->header->lock);
+	}// else
+		//pthread_mutex_unlock(standardObject->header->lock);
 }
 
 void CTRetain(void *object) {
 	struct _CTObjectTemplate *standardObject=(struct _CTObjectTemplate *)object;
 	
-	pthread_mutex_lock(standardObject->header->lock);
+	//pthread_mutex_lock(standardObject->header->lock);
 	++(standardObject->header->referenceCount);
-	pthread_mutex_unlock(standardObject->header->lock);
+	//pthread_mutex_unlock(standardObject->header->lock);
 }
