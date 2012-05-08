@@ -19,10 +19,10 @@ struct _CTString {
 
 
 CTBOOL CTStringCopy(CTString **cloneString, CTString *sourceString) {
-	return CTStringInit(cloneString, sourceString->body, sourceString->length);
+	return CTStringInitWithCString(cloneString, sourceString->body, sourceString->length);
 }
 
-CTBOOL CTStringInit(CTString **newString, char *sourceString, CTInteger sourceLength) {
+CTBOOL CTStringInitWithCString(CTString **newString, char *sourceString, CTInteger sourceLength) {
 	if(newString==NULL)
 		return NO;
 	
@@ -33,7 +33,7 @@ CTBOOL CTStringInit(CTString **newString, char *sourceString, CTInteger sourceLe
 	
 	(*newString)->body=(char *)malloc((*newString)->length);
 	if((*newString)->body==NULL) {
-		free(*newString);
+		CTRelease(*newString, NULL);
 		
 		return NO;
 	}
@@ -42,6 +42,6 @@ CTBOOL CTStringInit(CTString **newString, char *sourceString, CTInteger sourceLe
 	return YES;
 }
 
-void CTStringCleanUp(void *existingCTStringObject) {
+void CTStringDealloc(void *existingCTStringObject) {
 	free(((CTString *)existingCTStringObject)->body);
 }

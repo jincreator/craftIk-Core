@@ -15,7 +15,7 @@
 
 /*!
  * @typedef CTObjectHeader
- * @discussion Every single object that is designed to run inside craftIk MUST have this structure as the first field. Yes, this structure MUST be the first field in the object! Otherwise, our object management system will broke down. :(
+ * @discussion Every single object that is designed to run inside craftIk MUST have this structure as the first field. Yes, this structure MUST be the first field in the object! Otherwise, our object management system will break down. :(
  */
 typedef struct _CTObjectHeader CTObjectHeader;
 

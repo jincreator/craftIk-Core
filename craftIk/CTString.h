@@ -16,7 +16,7 @@ typedef struct _CTString CTString;
 
 
 CTBOOL CTStringCopy(CTString **cloneString, CTString *sourceString);
-CTBOOL CTStringInit(CTString **newString, char *sourceString, CTInteger sourceLength);
-void CTStringCleanUp(void *existingCTStringObject);
+CTBOOL CTStringInitWithCString(CTString **newString, char *sourceString, CTInteger sourceLength);
+void CTStringDealloc(void *existingCTStringObject);
 
 #endif

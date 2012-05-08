@@ -177,7 +177,7 @@ CTByte CTSettingGetViewDistance() {
 void CTSettingReload() {
 	FILE *settingFile=NULL;
 	
-	settingFile=fopen("server.cfg", "r");
+	settingFile=fopen("server.cfg", "r"); //@ file location?!?!?!
 	
 	//@ Implement me!
 	
