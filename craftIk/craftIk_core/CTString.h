@@ -1,8 +1,8 @@
 //
 //  CTString.h
-//  craftIk
+//  craftIk-Core
 //
-//  Created by Cyrus Hackford on 4/27/12.
+//  Created by Cyrus Hackford on 5/29/12.
 //  Copyright (c) 2012 SI Cyrusian. All rights reserved.
 //
 

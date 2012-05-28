@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BD547931573F9E500014149 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BD547921573F9E500014149 /* main.c */; };
+		6BD5479F1573FA2C00014149 /* CTObject.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BD547981573FA2C00014149 /* CTObject.c */; };
+		6BD547A01573FA2C00014149 /* CTSetting.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5479A1573FA2C00014149 /* CTSetting.c */; };
+		6BD547A11573FA2C00014149 /* CTString.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BD5479C1573FA2C00014149 /* CTString.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6BD547791573F97D00014149 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6BD5477B1573F97D00014149 /* craftIk_core */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = craftIk_core; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD547921573F9E500014149 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = SOURCE_ROOT; };
+		6BD547981573FA2C00014149 /* CTObject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CTObject.c; sourceTree = SOURCE_ROOT; };
+		6BD547991573FA2C00014149 /* CTObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTObject.h; sourceTree = SOURCE_ROOT; };
+		6BD5479A1573FA2C00014149 /* CTSetting.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CTSetting.c; sourceTree = SOURCE_ROOT; };
+		6BD5479B1573FA2C00014149 /* CTSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSetting.h; sourceTree = SOURCE_ROOT; };
+		6BD5479C1573FA2C00014149 /* CTString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CTString.c; sourceTree = SOURCE_ROOT; };
+		6BD5479D1573FA2C00014149 /* CTString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTString.h; sourceTree = SOURCE_ROOT; };
+		6BD5479E1573FA2C00014149 /* CTTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTypes.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BD547781573F97D00014149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6BD547701573F97D00014149 = {
+			isa = PBXGroup;
+			children = (
+				6BD5477E1573F97D00014149 /* craftIk-Core */,
+				6BD5477C1573F97D00014149 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BD5477C1573F97D00014149 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BD5477B1573F97D00014149 /* craftIk_core */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BD5477E1573F97D00014149 /* craftIk-Core */ = {
+			isa = PBXGroup;
+			children = (
+				6BD547A61573FBD600014149 /* Base System */,
+				6BD547A21573FA4700014149 /* Settings */,
+				6BD547921573F9E500014149 /* main.c */,
+			);
+			path = "craftIk-Core";
+			sourceTree = "<group>";
+		};
+		6BD547A21573FA4700014149 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6BD5479A1573FA2C00014149 /* CTSetting.c */,
+				6BD5479B1573FA2C00014149 /* CTSetting.h */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		6BD547A31573FA5500014149 /* CTString */ = {
+			isa = PBXGroup;
+			children = (
+				6BD5479C1573FA2C00014149 /* CTString.c */,
+				6BD5479D1573FA2C00014149 /* CTString.h */,
+			);
+			name = CTString;
+			sourceTree = "<group>";
+		};
+		6BD547A41573FB9B00014149 /* Object Memory Management */ = {
+			isa = PBXGroup;
+			children = (
+				6BD547981573FA2C00014149 /* CTObject.c */,
+				6BD547991573FA2C00014149 /* CTObject.h */,
+			);
+			name = "Object Memory Management";
+			sourceTree = "<group>";
+		};
+		6BD547A51573FBA800014149 /* Basic Types */ = {
+			isa = PBXGroup;
+			children = (
+				6BD547A31573FA5500014149 /* CTString */,
+				6BD5479E1573FA2C00014149 /* CTTypes.h */,
+			);
+			name = "Basic Types";
+			sourceTree = "<group>";
+		};
+		6BD547A61573FBD600014149 /* Base System */ = {
+			isa = PBXGroup;
+			children = (
+				6BD547A51573FBA800014149 /* Basic Types */,
+				6BD547A41573FB9B00014149 /* Object Memory Management */,
+			);
+			name = "Base System";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BD5477A1573F97D00014149 /* craftIk-Core */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BD547851573F97D00014149 /* Build configuration list for PBXNativeTarget "craftIk-Core" */;
+			buildPhases = (
+				6BD547771573F97D00014149 /* Sources */,
+				6BD547781573F97D00014149 /* Frameworks */,
+				6BD547791573F97D00014149 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "craftIk-Core";
+			productName = "craftIk-Core";
+			productReference = 6BD5477B1573F97D00014149 /* craftIk_core */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BD547721573F97D00014149 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "SI Cyrusian";
+			};
+			buildConfigurationList = 6BD547751573F97D00014149 /* Build configuration list for PBXProject "craftIk-Core" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6BD547701573F97D00014149;
+			productRefGroup = 6BD5477C1573F97D00014149 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BD5477A1573F97D00014149 /* craftIk-Core */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BD547771573F97D00014149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD547931573F9E500014149 /* main.c in Sources */,
+				6BD5479F1573FA2C00014149 /* CTObject.c in Sources */,
+				6BD547A01573FA2C00014149 /* CTSetting.c in Sources */,
+				6BD547A11573FA2C00014149 /* CTString.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6BD547831573F97D00014149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6BD547841573F97D00014149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6BD547861573F97D00014149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = craftIk_core;
+			};
+			name = Debug;
+		};
+		6BD547871573F97D00014149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = craftIk_core;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BD547751573F97D00014149 /* Build configuration list for PBXProject "craftIk-Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BD547831573F97D00014149 /* Debug */,
+				6BD547841573F97D00014149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BD547851573F97D00014149 /* Build configuration list for PBXNativeTarget "craftIk-Core" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BD547861573F97D00014149 /* Debug */,
+				6BD547871573F97D00014149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BD547721573F97D00014149 /* Project object */;
+}

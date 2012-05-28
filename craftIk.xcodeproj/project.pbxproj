@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BD547BE1573FD5000014149 /* WatchFox.c in Sources */ = {isa = PBXBuildFile; fileRef = 6BD547BD1573FD5000014149 /* WatchFox.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B7F750E1573FD80008ACE3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BD547B31573FD2C00014149 /* craftIk-Map.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BBB1C001573B94600CC76A2;
+			remoteInfo = "craftIk-Map";
+		};
+		6B7F75131573FE26008ACE3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BD547B31573FD2C00014149 /* craftIk-Map.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BBB1BFF1573B94600CC76A2;
+			remoteInfo = "craftIk-Map";
+		};
+		6B7F75151573FE29008ACE3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BD547A91573FD2500014149 /* craftIk-Core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BD5477A1573F97D00014149;
+			remoteInfo = "craftIk-Core";
+		};
+		6BD547B11573FD2500014149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BD547A91573FD2500014149 /* craftIk-Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BD5477B1573F97D00014149;
+			remoteInfo = "craftIk-Core";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6BD5472E1573F7A600014149 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6BD547301573F7A600014149 /* craftIk_run */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = craftIk_run; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BD547A91573FD2500014149 /* craftIk-Core.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "craftIk-Core.xcodeproj"; path = "craftIk_core/craftIk-Core.xcodeproj"; sourceTree = "<group>"; };
+		6BD547B31573FD2C00014149 /* craftIk-Map.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "craftIk-Map.xcodeproj"; path = "craftIk_map/craftIk-Map.xcodeproj"; sourceTree = "<group>"; };
+		6BD547BD1573FD5000014149 /* WatchFox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = WatchFox.c; path = craftIk/craftIk_run/WatchFox.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BD5472D1573F7A600014149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B7F750B1573FD80008ACE3F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B7F750F1573FD80008ACE3F /* craftIk_map */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BD547251573F7A600014149 = {
+			isa = PBXGroup;
+			children = (
+				6BD547331573F7A600014149 /* Servers */,
+				6BD5473D1573F7CF00014149 /* WatchFox(TM) */,
+				6BD547311573F7A600014149 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6BD547311573F7A600014149 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BD547301573F7A600014149 /* craftIk_run */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BD547331573F7A600014149 /* Servers */ = {
+			isa = PBXGroup;
+			children = (
+				6BD547A91573FD2500014149 /* craftIk-Core.xcodeproj */,
+				6BD547B31573FD2C00014149 /* craftIk-Map.xcodeproj */,
+			);
+			name = Servers;
+			path = craftIk;
+			sourceTree = "<group>";
+		};
+		6BD5473D1573F7CF00014149 /* WatchFox(TM) */ = {
+			isa = PBXGroup;
+			children = (
+				6BD547BD1573FD5000014149 /* WatchFox.c */,
+			);
+			name = "WatchFox(TM)";
+			sourceTree = "<group>";
+		};
+		6BD547AA1573FD2500014149 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BD547B21573FD2500014149 /* craftIk-Core */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BD5472F1573F7A600014149 /* craftIk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BD5473A1573F7A600014149 /* Build configuration list for PBXNativeTarget "craftIk" */;
+			buildPhases = (
+				6BD5472C1573F7A600014149 /* Sources */,
+				6BD5472D1573F7A600014149 /* Frameworks */,
+				6BD5472E1573F7A600014149 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B7F75161573FE29008ACE3F /* PBXTargetDependency */,
+				6B7F75141573FE26008ACE3F /* PBXTargetDependency */,
+			);
+			name = craftIk;
+			productName = craftIk;
+			productReference = 6BD547301573F7A600014149 /* craftIk_run */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BD547271573F7A600014149 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "SI Cyrusian";
+			};
+			buildConfigurationList = 6BD5472A1573F7A600014149 /* Build configuration list for PBXProject "craftIk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6BD547251573F7A600014149;
+			productRefGroup = 6BD547311573F7A600014149 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6BD547AA1573FD2500014149 /* Products */;
+					ProjectRef = 6BD547A91573FD2500014149 /* craftIk-Core.xcodeproj */;
+				},
+				{
+					ProductGroup = 6B7F750B1573FD80008ACE3F /* Products */;
+					ProjectRef = 6BD547B31573FD2C00014149 /* craftIk-Map.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				6BD5472F1573F7A600014149 /* craftIk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6B7F750F1573FD80008ACE3F /* craftIk_map */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = craftIk_map;
+			remoteRef = 6B7F750E1573FD80008ACE3F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6BD547B21573FD2500014149 /* craftIk-Core */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "craftIk-Core";
+			remoteRef = 6BD547B11573FD2500014149 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BD5472C1573F7A600014149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BD547BE1573FD5000014149 /* WatchFox.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B7F75141573FE26008ACE3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "craftIk-Map";
+			targetProxy = 6B7F75131573FE26008ACE3F /* PBXContainerItemProxy */;
+		};
+		6B7F75161573FE29008ACE3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "craftIk-Core";
+			targetProxy = 6B7F75151573FE29008ACE3F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6BD547381573F7A600014149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6BD547391573F7A600014149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6BD5473B1573F7A600014149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = craftIk_run;
+			};
+			name = Debug;
+		};
+		6BD5473C1573F7A600014149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = craftIk_run;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BD5472A1573F7A600014149 /* Build configuration list for PBXProject "craftIk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BD547381573F7A600014149 /* Debug */,
+				6BD547391573F7A600014149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BD5473A1573F7A600014149 /* Build configuration list for PBXNativeTarget "craftIk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BD5473B1573F7A600014149 /* Debug */,
+				6BD5473C1573F7A600014149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BD547271573F7A600014149 /* Project object */;
+}
