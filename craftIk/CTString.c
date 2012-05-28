@@ -13,7 +13,7 @@
 
 struct _CTString {
 	CTObjectHeader *header;
-	CTInteger length;
+	CTShort length; // JString compatible
 	char *body;
 };
 
@@ -22,14 +22,14 @@ CTBOOL CTStringCopy(CTString **cloneString, CTString *sourceString) {
 	return CTStringInitWithCString(cloneString, sourceString->body, sourceString->length);
 }
 
-CTBOOL CTStringInitWithCString(CTString **newString, char *sourceString, CTInteger sourceLength) {
+CTBOOL CTStringInitWithCString(CTString **newString, char *sourceString, CTShort sourceLength) {
 	if(newString==NULL)
 		return NO;
 	
 	if(CTAllocate((void **)newString, sizeof(CTString))==NO)
 		return NO;
 	
-	(*newString)->length=(sourceLength<0?strlen(sourceString):sourceLength);
+	(*newString)->length=(sourceLength<0?(CTShort)strlen(sourceString):sourceLength);
 	
 	(*newString)->body=(char *)malloc((*newString)->length);
 	if((*newString)->body==NULL) {

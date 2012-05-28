@@ -25,6 +25,13 @@
 			remoteGlobalIDString = 6B87E5F91547D76F001CE8AE;
 			remoteInfo = craftIk;
 		};
+		6BBB1C111573B94700CC76A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BBB1C0D1573B94600CC76A2 /* craftIk-Map.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6BBB1C001573B94600CC76A2;
+			remoteInfo = "craftIk-Map";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +50,7 @@
 		6B2052C41547D1B800D5A120 /* craftIk_run */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = craftIk_run; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B87E5CE1547D3C8001CE8AE /* watchfox.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = watchfox.c; sourceTree = SOURCE_ROOT; };
 		6B87E6071547D76F001CE8AE /* craftIk.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = craftIk.xcodeproj; path = craftIk/craftIk.xcodeproj; sourceTree = "<group>"; };
+		6BBB1C0D1573B94600CC76A2 /* craftIk-Map.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "craftIk-Map.xcodeproj"; path = "craftIk-Map/craftIk-Map.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				6B87E6071547D76F001CE8AE /* craftIk.xcodeproj */,
+				6BBB1C0D1573B94600CC76A2 /* craftIk-Map.xcodeproj */,
 			);
 			name = craftIk;
 			sourceTree = "<group>";
@@ -93,6 +102,14 @@
 			isa = PBXGroup;
 			children = (
 				6B87E60C1547D770001CE8AE /* craftIk */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BBB1C0E1573B94600CC76A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BBB1C121573B94700CC76A2 /* craftIk-Map */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +156,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 6BBB1C0E1573B94600CC76A2 /* Products */;
+					ProjectRef = 6BBB1C0D1573B94600CC76A2 /* craftIk-Map.xcodeproj */;
+				},
+				{
 					ProductGroup = 6B87E6081547D76F001CE8AE /* Products */;
 					ProjectRef = 6B87E6071547D76F001CE8AE /* craftIk.xcodeproj */;
 				},
@@ -156,6 +177,13 @@
 			fileType = "compiled.mach-o.executable";
 			path = craftIk;
 			remoteRef = 6B87E60B1547D770001CE8AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6BBB1C121573B94700CC76A2 /* craftIk-Map */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "craftIk-Map";
+			remoteRef = 6BBB1C111573B94700CC76A2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
