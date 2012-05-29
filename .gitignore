@@ -2,7 +2,13 @@ project.xcworkspace
 xcuserdata
 .DS_Store
 autoscan.log
-config.h
+config.log
 configure.scan
 autom4te.cache
 aclocal.m4
+stamp-h1
+.deps
+*.o
+*~
+*.swp
+.#*
