@@ -1,15 +1,15 @@
 //
 //  CTSetting.h
-//  craftIk
+//  craftIk-Core
 //
-//  Created by Cyrus Hackford on 4/25/12.
+//  Created by Cyrus Hackford on 5/29/12.
 //  Copyright (c) 2012 SI Cyrusian. All rights reserved.
 //
 
 #ifndef _CTSETTING_H_
 #define _CTSETTING_H_
 
-#include "CTBase.h"
+#include "CTTypes.h"
 #include "CTString.h"
 
 
@@ -33,30 +33,28 @@ enum {
 };
 typedef CTUByte CTLevelType;
 
-typedef struct _CTSetting CTSetting;
 
-
-BOOL CTSettingGetAllowFlight();
-BOOL CTSettingGetAllowNether();
-BOOL CTSettingGetAllowPvP();
+CTBOOL CTSettingGetAllowFlight();
+CTBOOL CTSettingGetAllowNether();
+CTBOOL CTSettingGetAllowPvP();
 CTDifficulty CTSettingGetDifficulty();
-BOOL CTSettingGetEnableQuery();
-BOOL CTSettingGetEnableRcon();
+CTBOOL CTSettingGetEnableQuery();
+CTBOOL CTSettingGetEnableRcon();
 CTGameMode CTSettingGetGameMode();
-BOOL CTSettingGetGenerateStructures();
+CTBOOL CTSettingGetGenerateStructures();
 CTString *CTSettingGetLevelName();
 CTULong CTSettingGetLevelSeed();
 CTLevelType CTSettingGetLevelType();
 CTShort CTSettingGetMaxBuildHeight();
 CTShort CTSettingGetMaxPlayerCount();
-BOOL CTSettingGetOnlineMode();
+CTBOOL CTSettingGetOnlineMode();
 CTString *CTSettingGetServerDescription();
 CTString *CTSettingGetServerIP();
 CTShort CTSettingGetServerPort();
-BOOL CTSettingGetSpawnAnimals();
-BOOL CTSettingGetSpawnMonsters();
-BOOL CTSettingGetSpawnNPCs();
-BOOL CTSettingGetUseWhiteList();
+CTBOOL CTSettingGetSpawnAnimals();
+CTBOOL CTSettingGetSpawnMonsters();
+CTBOOL CTSettingGetSpawnNPCs();
+CTBOOL CTSettingGetUseWhiteList();
 CTByte CTSettingGetViewDistance();
 
 void CTSettingReload();
