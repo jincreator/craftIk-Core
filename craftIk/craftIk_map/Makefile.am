@@ -1,0 +1,2 @@
+bin_PROGRAMS=craftIk_map
+craftIk_map_SOURCES=main.c

@@ -1,0 +1,2 @@
+bin_PROGRAMS=craftIk_run
+craftIk_run_SOURCES=WatchFox.c

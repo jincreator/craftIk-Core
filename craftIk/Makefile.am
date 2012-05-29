@@ -1,2 +1,1 @@
-bin_PROGRAMS=craftIk
-craftIk_SOURCES=main.c
+SUBDIRS=craftIk_core craftIk_map craftIk_run
